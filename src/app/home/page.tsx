@@ -293,7 +293,8 @@ export default function HomePage() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            padding: '1rem'
+            padding: '1rem',
+            overflowY: 'auto'
           }}
           onClick={() => setMenuOpen(false)}
         >
@@ -323,52 +324,57 @@ export default function HomePage() {
             onClick={(e) => e.stopPropagation()}
             style={{
               background: 'linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 250, 252, 0.95))',
-              borderRadius: '2rem',
-              padding: 'clamp(2rem, 5vw, 3rem)',
+              borderRadius: '1.5rem',
+              padding: 'clamp(1.5rem, 4vw, 2.5rem)',
               maxWidth: '600px',
-              width: '100%',
+              width: '90%',
+              maxHeight: '85vh',
+              overflowY: 'auto',
               boxShadow: '0 30px 80px -20px rgba(255, 105, 135, 0.5), 0 0 0 2px rgba(255, 182, 193, 0.5)',
               animation: 'slideIn 0.5s ease-out',
               position: 'relative',
-              border: '3px solid rgba(255, 192, 203, 0.3)'
+              border: '3px solid rgba(255, 192, 203, 0.3)',
+              margin: 'auto'
             }}
           >
             <button
               onClick={() => setMenuOpen(false)}
               style={{
-                position: 'absolute',
-                top: '1rem',
-                right: '1rem',
-                background: 'rgba(255, 105, 135, 0.1)',
-                border: '2px solid rgba(255, 105, 135, 0.3)',
-                fontSize: '1.5rem',
+                position: 'sticky',
+                top: '0.5rem',
+                float: 'right',
+                background: 'linear-gradient(135deg, #ff6f91, #ff1493)',
+                border: '2px solid rgba(255, 255, 255, 0.9)',
+                fontSize: '1.25rem',
                 cursor: 'pointer',
-                color: '#ff6f91',
-                width: '45px',
-                height: '45px',
+                color: '#fff',
+                width: '40px',
+                height: '40px',
                 borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transition: 'all 0.2s',
-                fontWeight: 'bold'
+                transition: 'all 0.3s',
+                fontWeight: 'bold',
+                boxShadow: '0 4px 12px rgba(255, 20, 147, 0.4)',
+                zIndex: 10
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 105, 135, 0.2)'
-                e.currentTarget.style.transform = 'rotate(90deg)'
+                e.currentTarget.style.transform = 'rotate(90deg) scale(1.1)'
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(255, 20, 147, 0.6)'
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 105, 135, 0.1)'
-                e.currentTarget.style.transform = 'rotate(0deg)'
+                e.currentTarget.style.transform = 'rotate(0deg) scale(1)'
+                e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 20, 147, 0.4)'
               }}
             >
               ✕
             </button>
 
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-              <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>💝</div>
+            <div style={{ textAlign: 'center', marginBottom: '2rem', clear: 'both', paddingTop: '1rem' }}>
+              <div style={{ fontSize: 'clamp(2rem, 5vw, 3rem)', marginBottom: '0.5rem' }}>💝</div>
               <h2 style={{
-                fontSize: 'clamp(1.5rem, 4vw, 2rem)',
+                fontSize: 'clamp(1.25rem, 4vw, 1.75rem)',
                 fontFamily: '"Great Vibes", cursive',
                 color: '#ff6f91',
                 marginBottom: '0.5rem'
@@ -378,13 +384,13 @@ export default function HomePage() {
             </div>
 
             <div style={{
-              fontSize: 'clamp(1.1rem, 3vw, 1.5rem)',
-              lineHeight: '2.2',
+              fontSize: 'clamp(1rem, 3vw, 1.3rem)',
+              lineHeight: '2',
               color: '#4a4a4a',
               textAlign: 'right',
               direction: 'rtl',
               fontFamily: '"Jameel Noori Nastaleeq", "Noto Nastalikh Urdu", serif',
-              padding: '1.5rem',
+              padding: 'clamp(1rem, 3vw, 1.5rem)',
               background: 'rgba(255, 240, 245, 0.5)',
               borderRadius: '1rem',
               border: '2px solid rgba(255, 182, 193, 0.3)'
@@ -397,10 +403,10 @@ export default function HomePage() {
             </div>
 
             <div style={{
-              marginTop: '2rem',
+              marginTop: '1.5rem',
               textAlign: 'center',
               color: '#9ca3af',
-              fontSize: '0.875rem'
+              fontSize: 'clamp(0.75rem, 2vw, 0.875rem)'
             }}>
               With all my love 💕
             </div>
