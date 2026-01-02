@@ -12,9 +12,9 @@ export default function LoginPage() {
 
   function validate() {
     setError('')
-    const nickOk = nick.trim().toLowerCase() === 'iman'
-    const dob1Ok = dob1 === '2002-09-29' // My DOB: 29-9-2002
-    const dob2Ok = dob2 === '2004-08-24' // Her DOB: 24-8-2004
+    const nickOk = nick.trim().toLowerCase() === 'imanoo'
+    const dob1Ok = dob1 === '2004-08-14' 
+    const dob2Ok = dob2 === '2007-01-03' 
     if (nickOk && dob1Ok && dob2Ok) {
       // Set session
       sessionStorage.setItem('isAuthenticated', 'true')
